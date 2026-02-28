@@ -1,0 +1,15 @@
+/* --- Completion Screen --- */
+
+/* Success Headline (Green) */
+.success-header {
+    -fx-text-fill: #27AE60; /* Modern Emerald Green */
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(39, 174, 96, 0.2), 5, 0, 0, 0);
+}
+
+/* Secondary Details Text (e.g., "Found 50 records") */
+.result-details-label {
+    -fx-text-fill: #546E7A; /* Grey-Blue */
+    -fx-font-size: 14px;
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!-- 1. Link the CSS file here -->
+<StackPane stylesheets="@style.css" 
+           xmlns="http://javafx.com/javafx/25" 
+           xmlns:fx="http://javafx.com/fxml/1" 
+           fx:controller="com.humanitarian.logistics.userinterface.sentimentAnalysis.modelInitialize.VisobertInitializeController">
+   <children>
+      <!-- 2. Add the card style class -->
+      <VBox styleClass="init-card" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="400.0">
+         <children>
+            <!-- 3. Add the label style class -->
+            <Label fx:id="statusLabel" text="Initializing Model..." styleClass="status-label-large">
+               <!-- Font tag is redundant now due to CSS, but safe to keep -->
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            
+            <!-- 4. Increased width slightly for better proportion -->
+            <ProgressBar fx:id="progressBar" prefWidth="320.0" progress="0.0" />
+         </children>
+      </VBox>
+   </children>
+</StackPane>

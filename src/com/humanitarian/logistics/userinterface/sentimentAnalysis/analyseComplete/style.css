@@ -1,0 +1,140 @@
+/* ================= GLOBAL ================= */
+.root {
+    -fx-background-color: #F4F6F8;
+    -fx-font-family: "Segoe UI", "Open Sans", Helvetica, sans-serif;
+    -fx-font-size: 14px;
+}
+
+/* ================= LABELS ================= */
+.label {
+    -fx-text-fill: #2c3e50;
+}
+
+.header-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.sub-header-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #636e72;
+}
+
+/* ================= BUTTONS ================= */
+.button {
+    -fx-background-color: #dfe6e9;
+    -fx-text-fill: #2d3436;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16 8 16;
+}
+
+.button:hover {
+    -fx-background-color: #b2bec3;
+}
+
+/* Primary Action Button (Use styleClass="button-primary") */
+.button-primary {
+    -fx-background-color: #0984e3;
+    -fx-text-fill: white;
+}
+
+.button-primary:hover {
+    -fx-background-color: #74b9ff;
+}
+
+/* --- Tab Pane --- */
+.tab-pane {
+    -fx-tab-min-height: 40px;
+    -fx-background-color: transparent;
+}
+
+.tab-header-area .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.tab {
+    -fx-background-color: #E0E6ED;
+    -fx-background-radius: 6 6 0 0;
+    -fx-background-insets: 0 5 0 0; /* Spacing between tabs */
+    -fx-padding: 5 20;
+    -fx-border-color: transparent;
+}
+
+.tab:selected {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #3399FF;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, -2);
+}
+
+.tab-label {
+    -fx-text-fill: #546E7A;
+    -fx-font-weight: normal;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: #3399FF;
+    -fx-font-weight: bold;
+}
+
+.tab-content-area {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 0 6 6 6; /* Rounded corners except top left */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 10, 0, 0, 5);
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 5;
+}
+
+/* --- TextArea Styling --- */
+.text-area {
+    -fx-font-family: "Consolas", "Monospaced", sans-serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: #2C3E50;
+    -fx-background-color: transparent; 
+}
+
+.text-area .content {
+    -fx-background-color: #F8F9FA; /* Very light grey background */
+    -fx-background-radius: 4;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+}
+
+.text-area:focused .content {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #3399FF;
+    -fx-effect: dropshadow(three-pass-box, rgba(51, 153, 255, 0.2), 5, 0, 0, 0);
+}
+/* ================= PROGRESS BAR ================= */
+.progress-bar .track {
+    -fx-background-color: #dfe6e9;
+    -fx-background-radius: 4;
+}
+
+.progress-bar .bar {
+    -fx-background-color: #0984e3;
+    -fx-background-radius: 4;
+    -fx-padding: 6px;
+}
+
+/* --- Pie Chart Styling --- */
+.pie-chart {
+    -fx-background-color: transparent;
+}
+
+.pie-chart .chart-title {
+    -fx-text-fill: #2C3E50;
+    -fx-font-size: 1.2em;
+}
+
+.pie-chart .chart-legend {
+    -fx-background-color: transparent;
+}
+
+.pie-chart .chart-legend-item {
+    -fx-text-fill: #546E7A;
+}

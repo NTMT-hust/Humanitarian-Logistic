@@ -1,0 +1,155 @@
+/* 
+    Theme: Modern Light Humanitarian
+    Author: Assistant
+*/
+
+/* --- Global Settings --- */
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    -fx-background-color: #F4F6F8;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2C3E50;
+}
+
+/* --- Labels --- */
+.label {
+    -fx-text-fill: #2C3E50;
+}
+
+/* Target the Big Title specifically */
+.label-header { 
+    /* You might want to add styleClass="label-header" to your title Label in FXML */
+    -fx-text-fill: #2C3E50;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+/* --- Menu Bar --- */
+.menu-bar {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: transparent transparent #E0E0E0 transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 5 10;
+}
+
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-padding: 5 10;
+}
+
+.menu-button:hover {
+    -fx-background-color: #F0F4F8;
+    -fx-background-radius: 4;
+}
+
+.menu-button:showing {
+    -fx-background-color: #E1E8ED;
+}
+
+.menu-item {
+    -fx-padding: 5 15;
+}
+
+.menu-item:focused {
+    -fx-background-color: #3399FF;
+    -fx-text-fill: white;
+}
+
+/* --- Buttons (Sidebar) --- */
+.button {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #3399FF;
+    -fx-border-color: #3399FF;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 10 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 3, 0, 0, 2);
+    -fx-alignment: CENTER_LEFT; /* Align text to left for sidebar look */
+}
+
+.button:hover {
+    -fx-background-color: #3399FF;
+    -fx-text-fill: #FFFFFF;
+    -fx-effect: dropshadow(three-pass-box, rgba(51, 153, 255, 0.4), 8, 0, 0, 4);
+}
+
+.button:pressed {
+    -fx-background-color: #267ACC;
+    -fx-border-color: #267ACC;
+    -fx-effect: none;
+}
+
+/* Specific Style for the Delete Button (Red) */
+#deleteBtn {
+    -fx-text-fill: #E74C3C;
+    -fx-border-color: #E74C3C;
+}
+
+#deleteBtn:hover {
+    -fx-background-color: #E74C3C;
+    -fx-text-fill: #FFFFFF;
+    -fx-effect: dropshadow(three-pass-box, rgba(231, 76, 60, 0.4), 8, 0, 0, 4);
+}
+
+/* --- Tab Pane --- */
+.tab-pane {
+    -fx-tab-min-height: 40px;
+    -fx-background-color: transparent;
+}
+
+.tab-header-area .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.tab {
+    -fx-background-color: #E0E6ED;
+    -fx-background-radius: 6 6 0 0;
+    -fx-background-insets: 0 5 0 0; /* Spacing between tabs */
+    -fx-padding: 5 20;
+    -fx-border-color: transparent;
+}
+
+.tab:selected {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #3399FF;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, -2);
+}
+
+.tab-label {
+    -fx-text-fill: #546E7A;
+    -fx-font-weight: normal;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: #3399FF;
+    -fx-font-weight: bold;
+}
+
+.tab-content-area {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 0 6 6 6; /* Rounded corners except top left */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 10, 0, 0, 5);
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 5;
+}
+
+/* --- Scroll Bars (Modern Minimalist) --- */
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #CFD8DC;
+    -fx-background-radius: 5;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #B0BEC5;
+}
+
+/* --- Anchor Panes (Inner Content) --- */
+#filePane, #youtubePane, #googleCsePane, #newsApiPane {
+    -fx-background-color: transparent; 
+}   

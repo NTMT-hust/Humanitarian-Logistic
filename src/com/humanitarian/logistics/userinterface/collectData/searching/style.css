@@ -1,0 +1,204 @@
+/* 
+    Theme: Modern Light Humanitarian
+    Author: Assistant
+    Description: Consolidated styles for all application screens.
+*/
+
+/* --- Global Settings --- */
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    -fx-background-color: #F4F6F8; /* Soft Off-White Background */
+    -fx-font-size: 14px;
+    -fx-text-fill: #2C3E50;
+}
+
+/* --- Menu Bar --- */
+.menu-bar {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: transparent transparent #E0E0E0 transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 5 10;
+}
+
+.menu-button:hover {
+    -fx-background-color: #F0F4F8;
+    -fx-background-radius: 4;
+}
+
+.menu-item:focused {
+    -fx-background-color: #3399FF;
+    -fx-text-fill: white;
+}
+
+/* --- Sidebar Buttons --- */
+.button {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #3399FF;
+    -fx-border-color: #3399FF;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 3, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: #3399FF;
+    -fx-text-fill: #FFFFFF;
+}
+
+.button:pressed {
+    -fx-background-color: #267ACC;
+}
+
+/* --- Delete Button Specifics --- */
+#deleteBtn {
+    -fx-text-fill: #E74C3C;
+    -fx-border-color: #E74C3C;
+}
+#deleteBtn:hover {
+    -fx-background-color: #E74C3C;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* --- Tab Pane --- */
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.tab {
+    -fx-background-color: #E0E6ED;
+    -fx-background-radius: 6 6 0 0;
+}
+
+.tab:selected {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #3399FF;
+}
+
+/* --- Small Popups / Cards (Initialization, Searching, Cancelling) --- */
+/* This is the class used in your Searching screen */
+.init-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 20, 0, 0, 8);
+    -fx-padding: 30;
+    -fx-spacing: 15;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+}
+
+/* Status Labels */
+.status-label {
+    -fx-text-fill: #2C3E50;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.status-label-danger {
+    -fx-text-fill: #E74C3C;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.result-details-label {
+    -fx-text-fill: #546E7A; /* Grey-Blue */
+    -fx-font-size: 14px;
+}
+
+.success-header {
+    -fx-text-fill: #27AE60; /* Green */
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* --- Progress Bar --- */
+.progress-bar {
+    -fx-pref-height: 12px;
+}
+.progress-bar .track {
+    -fx-background-color: #E0E6ED;
+    -fx-background-radius: 6;
+}
+.progress-bar .bar {
+    -fx-background-color: #3399FF;
+    -fx-background-radius: 6;
+}
+
+/* --- Collector Selection Screen --- */
+.selection-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 12;
+    -fx-border-color: #E0E0E0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 15, 0, 0, 5);
+}
+
+.nav-arrow-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #3399FF;
+    -fx-font-size: 36px;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+    -fx-border-color: transparent; /* Remove border from default button style */
+}
+
+.selection-menu-button {
+    -fx-background-color: #F4F6F8;
+    -fx-border-color: #3399FF;
+    -fx-border-radius: 4;
+    -fx-text-fill: #2C3E50;
+}
+
+/* --- Input Box / Form Screen --- */
+.form-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 20, 0, 0, 5);
+    -fx-padding: 30;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 12;
+}
+
+.form-label {
+    -fx-text-fill: #546E7A;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.text-field, .date-picker .text-field {
+    -fx-background-color: #F4F6F8;
+    -fx-border-color: #CFD8DC;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 8;
+    -fx-text-fill: #2C3E50;
+}
+
+.text-field:focused {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #3399FF;
+}
+
+.validation-label {
+    -fx-text-fill: #E74C3C;
+    -fx-font-size: 11px;
+    -fx-font-style: italic;
+}
+
+/* --- Primary/Secondary Actions --- */
+.button-primary {
+    -fx-background-color: #3399FF;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.button-primary:hover {
+    -fx-background-color: #267ACC;
+}
+
+.button-secondary {
+    -fx-background-color: transparent;
+    -fx-text-fill: #78909C;
+    -fx-border-color: #B0BEC5;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.humanitarian.logistics.userinterface.collectData.collectorSelectMenu.CollectorSelectionController">
+   <children>
+      <!-- Added 'selection-card' class for the white background and shadow -->
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="400.0" styleClass="selection-card">
+         <children>
+            <VBox alignment="CENTER" maxWidth="1.7976931348623157E308" />
+            
+            <Label alignment="CENTER" layoutX="128.0" layoutY="20.0" prefHeight="34.0" prefWidth="145.0" styleClass="title-label" text="Select Collector">
+            </Label>
+            
+            <!-- Applied nav-arrow-btn class -->
+            <Button fx:id="advanceSearchBtn" layoutX="354.0" layoutY="65.0" mnemonicParsing="false" onAction="#advanceSearch" styleClass="nav-arrow-btn" text="→">
+            </Button>
+            
+            <!-- Applied nav-arrow-btn class -->
+            <Button fx:id="cancel" blendMode="MULTIPLY" depthTest="ENABLE" layoutX="14.0" layoutY="65.0" mnemonicParsing="false" onAction="#cancel" styleClass="nav-arrow-btn" text="←">
+            </Button>
+            
+            <!-- Applied selection-menu-button class -->
+            <MenuButton fx:id="menuSelection" layoutX="128.0" layoutY="72.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="145.0" styleClass="selection-menu-button" text="Choose API">
+              <items>
+                  <!-- The menu-item-class is handled in CSS now -->
+                  <MenuItem mnemonicParsing="false" styleClass="menu-item-class" text="Youtube         " />
+                  <MenuItem mnemonicParsing="false" styleClass="menu-item-class" text="GoogleCSE       " />
+                  <MenuItem mnemonicParsing="false" styleClass="menu-item-class" text="NewsAPI         " />
+              </items>
+            </MenuButton>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

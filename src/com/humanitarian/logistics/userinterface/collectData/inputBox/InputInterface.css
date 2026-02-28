@@ -1,0 +1,76 @@
+/* --- Input Form / Search Box --- */
+
+/* The Container Card */
+.form-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 20, 0, 0, 5);
+    -fx-padding: 30;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+}
+
+/* Field Labels (Left side) */
+.form-label {
+    -fx-text-fill: #546E7A;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-padding: 5 0 0 0; /* Slight top padding to align with text field text */
+}
+
+/* Text Fields and Date Pickers */
+.text-field, .date-picker .text-field {
+    -fx-background-color: #F4F6F8;
+    -fx-border-color: #CFD8DC;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 8;
+    -fx-text-fill: #2C3E50;
+}
+
+.text-field:focused, .date-picker:focused .text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #3399FF;
+    -fx-effect: dropshadow(three-pass-box, rgba(51, 153, 255, 0.2), 5, 0, 0, 0);
+}
+
+/* DatePicker Specifics */
+.date-picker .arrow-button {
+    -fx-background-color: transparent;
+}
+.date-picker .arrow-button .arrow {
+    -fx-background-color: #546E7A;
+}
+
+/* Validation Text (*Required) */
+.validation-label {
+    -fx-text-fill: #E74C3C; /* Soft Red */
+    -fx-font-size: 11px;
+    -fx-font-style: italic;
+}
+
+/* Primary Action Button (OK) */
+.button-primary {
+    -fx-background-color: #3399FF;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.button-primary:hover {
+    -fx-background-color: #267ACC;
+    -fx-effect: dropshadow(three-pass-box, rgba(51, 153, 255, 0.4), 8, 0, 0, 2);
+}
+
+/* Secondary Action Button (Cancel) */
+.button-secondary {
+    -fx-background-color: transparent;
+    -fx-text-fill: #78909C;
+    -fx-border-color: #B0BEC5;
+    -fx-cursor: hand;
+}
+.button-secondary:hover {
+    -fx-background-color: #F4F6F8;
+    -fx-text-fill: #2C3E50;
+    -fx-border-color: #546E7A;
+}

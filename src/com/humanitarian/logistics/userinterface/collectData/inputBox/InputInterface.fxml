@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!-- Added stylesheets link -->
+<StackPane stylesheets="@style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.humanitarian.logistics.userinterface.collectData.inputBox.InputBoxController">
+
+    <!-- Increased prefHeight slightly to accommodate padding and validation labels -->
+    <AnchorPane fx:id="scenePane" prefHeight="350.0" prefWidth="600">
+        <children>
+
+            <!-- MAIN CONTAINER: Added styleClass "form-card" -->
+            <VBox alignment="TOP_CENTER" spacing="25" styleClass="form-card" AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20">
+
+                <!-- TITLE: Added styleClass "title-label" -->
+                <Label styleClass="title-label" text="Advanced Search">
+                    <font>
+                        <Font size="26" />
+                    </font>
+                </Label>
+
+                <!-- FORM GRID -->
+                <GridPane hgap="15" vgap="20">
+                    <columnConstraints>
+                        <!-- Left columns aligned Right -->
+                        <ColumnConstraints halignment="RIGHT" minWidth="80" />
+                        <ColumnConstraints hgrow="ALWAYS" percentWidth="40.0" />
+                        <ColumnConstraints halignment="RIGHT" minWidth="80" />
+                        <ColumnConstraints hgrow="ALWAYS" percentWidth="40.0" />
+                    </columnConstraints>
+                    
+                    <!-- KEY ALIGNMENT FIX: valignment="TOP" ensures labels align with inputs, not the error messages -->
+                    <rowConstraints>
+                        <RowConstraints valignment="TOP" />
+                        <RowConstraints valignment="TOP" />
+                        <RowConstraints valignment="TOP" />
+                    </rowConstraints>
+
+                    <!-- Keyword -->
+                    <Label styleClass="form-label" text="Keyword:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <TextField fx:id="userKeyword" promptText="Enter keywords..." GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                    <!-- Start Date -->
+                    <Label styleClass="form-label" text="Start Date:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                    <VBox spacing="4" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                        <DatePicker fx:id="userStartDate" maxWidth="1.7976931348623157E308" promptText="Pick a date" />
+                        <Label styleClass="validation-label" text="*Required" />
+                    </VBox>
+
+                    <!-- Hashtags -->
+                    <Label styleClass="form-label" text="Hashtags:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <TextField fx:id="userHashtags" promptText="#logistics" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <!-- End Date -->
+                    <Label styleClass="form-label" text="End Date:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                    <VBox spacing="4" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                        <DatePicker fx:id="userEndDate" maxWidth="1.7976931348623157E308" promptText="Pick a date" />
+                        <Label styleClass="validation-label" text="*Required" />
+                    </VBox>
+
+                    <!-- Max results -->
+                    <Label styleClass="form-label" text="Max Results:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <VBox spacing="4" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <TextField fx:id="userMaxResult" promptText="100" />
+                        <Label styleClass="validation-label" text="*Required" />
+                    </VBox>
+
+                </GridPane>
+
+                <!-- BUTTONS -->
+                <HBox alignment="CENTER" spacing="20">
+                    <!-- Added specific button classes -->
+                    <Button fx:id="OK" onAction="#submit" prefHeight="40.0" prefWidth="120.0" styleClass="button-primary" text="Search" />
+                    <Button fx:id="Cancel" onAction="#cancel" prefHeight="40.0" prefWidth="120.0" styleClass="button-secondary" text="Cancel" />
+                </HBox>
+
+            </VBox>
+        </children>
+    </AnchorPane>
+</StackPane>

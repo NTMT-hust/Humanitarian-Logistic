@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane stylesheets="@style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.humanitarian.logistics.userinterface.collectData.searching.SearchingController">
+   <children>
+      <!-- 
+           Added styleClass="init-card" for the theme.
+           Kept prefHeight="150.0" and prefWidth="400.0" as requested.
+      -->
+      <VBox fx:id="scenePane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="400.0" styleClass="init-card">
+         <children>
+            <!-- Title Label -->
+            <Label styleClass="status-label" text="Searching...">
+               <font>
+                  <!-- You can keep this local override or let CSS handle it -->
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            
+            <!-- Progress Bar (Style handled automatically by CSS) -->
+            <ProgressBar fx:id="progressBar" prefHeight="20.0" prefWidth="250.0" progress="0.0" />
+            
+            <!-- Dynamic Status Label (using the grey-blue secondary text style) -->
+            <Label fx:id="statusLabel" styleClass="result-details-label" text="Connecting..." />
+         </children>
+      </VBox>
+   </children>
+</StackPane>

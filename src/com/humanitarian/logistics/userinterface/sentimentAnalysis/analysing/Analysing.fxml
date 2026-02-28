@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!-- 1. Link the CSS file here (Adjust path if necessary) -->
+<StackPane stylesheets="@style.css" 
+           xmlns="http://javafx.com/javafx/25" 
+           xmlns:fx="http://javafx.com/fxml/1" 
+           fx:controller="com.humanitarian.logistics.userinterface.sentimentAnalysis.analysing.AnalysingController">
+   <children>
+      <!-- 2. Add styleClass="analysis-card" -->
+      <VBox styleClass="analysis-card" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="400.0">
+         <children>
+            <!-- 3. Add styleClass="header-label" -->
+            <Label text="Analysing Data..." styleClass="header-label">
+               <!-- Font tag can be removed since CSS handles it, but keeping it is fine -->
+            </Label>
+            
+            <!-- ProgressBar picks up CSS automatically by its component type, 
+                 but we can make it wider here -->
+            <ProgressBar fx:id="progressBar" prefWidth="320.0" progress="0.0" />
+            
+            <!-- 4. Add styleClass="status-label" -->
+            <Label fx:id="statusLabel" text="Initializing..." styleClass="status-label" />
+         </children>
+      </VBox>
+   </children>
+</StackPane>

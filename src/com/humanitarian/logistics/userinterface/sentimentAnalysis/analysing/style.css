@@ -1,0 +1,53 @@
+/* 
+    File: initialize.css
+    Theme: Modern Light Humanitarian
+    Description: Styling for model initialization screens
+*/
+
+/* --- Global Background --- */
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    -fx-background-color: #F4F6F8; /* Soft Off-White */
+    -fx-text-fill: #2C3E50;
+}
+
+/* --- Card Container --- */
+/* Matches the 'init-card' class in your FXML */
+.init-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 20, 0, 0, 8);
+    -fx-padding: 30;
+    -fx-spacing: 20; /* Space between Label and Progress Bar */
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+    -fx-alignment: CENTER;
+}
+
+/* --- Text Label --- */
+/* Matches the 'status-label-large' class in your FXML */
+.status-label-large {
+    -fx-text-fill: #2C3E50; /* Dark Slate Blue */
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 2, 0, 0, 0);
+}
+
+/* --- Progress Bar --- */
+.progress-bar {
+    -fx-pref-height: 14px; /* Slightly thicker for the model loader */
+}
+
+.progress-bar .track {
+    -fx-background-color: #E0E6ED; /* Light Grey track */
+    -fx-background-radius: 7;
+    -fx-background-insets: 0;
+}
+
+.progress-bar .bar {
+    -fx-background-color: #3399FF; /* Theme Blue */
+    -fx-background-radius: 7;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(51, 153, 255, 0.3), 5, 0, 0, 0); /* Glow effect */
+}

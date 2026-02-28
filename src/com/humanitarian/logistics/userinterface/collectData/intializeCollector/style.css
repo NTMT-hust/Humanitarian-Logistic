@@ -1,0 +1,39 @@
+/* --- Initialization / Loading Screen --- */
+
+/* The card container */
+.init-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 20, 0, 0, 8);
+    -fx-padding: 30;
+    -fx-spacing: 15; /* Space between Label and Bar */
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+}
+
+/* The Status Label */
+.status-label {
+    -fx-text-fill: #2C3E50;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* --- Progress Bar Styling --- */
+.progress-bar {
+    -fx-pref-width: 320px; /* Make it slightly wider */
+    -fx-pref-height: 12px;
+}
+
+.progress-bar .track {
+    -fx-background-color: #E0E6ED; /* Light Grey background */
+    -fx-background-radius: 6;
+    -fx-background-insets: 0;
+}
+
+.progress-bar .bar {
+    -fx-background-color: #3399FF; /* Theme Blue */
+    -fx-background-radius: 6;
+    -fx-background-insets: 0;
+}
